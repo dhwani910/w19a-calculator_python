@@ -3,19 +3,48 @@ import subtraction
 import multiplication
 import division
 
-print("Welcome to the simple calculator in python")
 
-a=float(input("Enter the first number: "))
-b=float(input("Enter the second number: "))
-op=input("Enter the operator: ")    
+def method():
+    while True:
+        print("Welcome to the simple calculator in python")
+        op=input("Enter the operator: ")  
+        thislist = []
+        a = True
 
-if op=="+":
-    addition.add(a,b)
-elif op=="-":
-    subtraction.sub(a,b)
-elif op=="*":
-    multiplication.mul(a,b)
-elif op=="/":
-    division.div(a,b)
-else:
-    print("Invalid operator ")                
+        while a == True:
+            n1 = input("enter the number: ")
+            print("To calculate type '=': ")
+            if n1 == "=":
+                a = False
+            else:
+                n1 = float(n1)
+                thislist.append(n1)  
+
+        if op=="+":
+            answer = addition.add(thislist)
+            print("result: " + str(answer))
+            print(thislist)
+        elif op=="-":
+            answer = subtraction.sub(thislist)
+            print("result: " + str(answer))
+        elif op=="*":
+            answer = multiplication.mul(thislist)
+            print("result: " + str(answer))
+        elif op=="/":
+            answer = division.div(thislist)
+            print("result: " + str(answer))
+        else:
+            print("Invalid operator")  
+
+        print(" ")  
+
+method()                       
+                      
+            
+
+
+
+
+  
+
+               

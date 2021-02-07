@@ -1,3 +1,7 @@
-def div(a,b):
-    result=a/b
-    print(result)
+def div(thislist):
+    answer = thislist[0]
+    for x in (thislist[1:]):
+        x = float(x)
+        answer /= x
+    return(answer)    
+   
